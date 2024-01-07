@@ -17,6 +17,7 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products></Products>,
+        loader: () => fetch("https://restcountries.com/v3.1/all"),
       },
       {
         path: "/gallery",
