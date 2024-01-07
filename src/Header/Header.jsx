@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="max-w-5xl mx-auto">
       <div className="flex justify-between  items-center">
-        <div className="flex gap-4">
+        <div className="flex md:flex-row flex-col gap-4 items-center">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/products">Products</NavLink>
           <NavLink to="/gallery">Gallery</NavLink>

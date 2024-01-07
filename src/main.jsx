@@ -8,6 +8,7 @@ import Products from "./Products/Products";
 import Gallery from "./Gallery/Gallery";
 import Help from "./Help/Help";
 import About from "./About/About";
+import ProductDetails from "./ProductDetails/ProductDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +31,12 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>,
+      },
+      {
+        path: "/products/:code",
+        loader: ({ params }) =>
+          fetch(`https://restcountries.com/v3.1/alpha/${params.code}`),
+        element: <ProductDetails></ProductDetails>,
       },
     ],
   },

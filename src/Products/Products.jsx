@@ -3,16 +3,8 @@ import Product from "../Product/Product";
 
 const Products = () => {
   const products = useLoaderData();
-  //   console.log(products);
   return (
-    <div>
-      <div>
-        <input
-          type="text"
-          placeholder="Type here"
-          className="input input-bordered input-primary w-full max-w-xs"
-        />
-      </div>
+    <div className="grid md:grid-cols-3 gap-5 mt-8">
       {products.map((product) => (
         <Product key={product.cca2} product={product}></Product>
       ))}
