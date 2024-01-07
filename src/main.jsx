@@ -4,14 +4,33 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./Header/Header";
 import ErrorPage from "./ErrorPage/ErrorPage";
+import Products from "./Products/Products";
+import Gallery from "./Gallery/Gallery";
+import Help from "./Help/Help";
+import About from "./About/About";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Header></Header>,
-    errorElement:<ErrorPage></ErrorPage>,
-    children:[
-
-    ]
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "/products",
+        element: <Products></Products>,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery></Gallery>,
+      },
+      {
+        path: "/help",
+        element: <Help></Help>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
+      },
+    ],
   },
 ]);
 
